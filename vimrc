@@ -10,6 +10,7 @@ syntax on
 
 " set the runtime path to include Vundle and initialize
 set rtp+=~/.vim/bundle/Vundle.vim
+set rtp+=/usr/local/opt/fzf
 call vundle#begin()
 " alternatively, pass a path where Vundle should install plugins
 "call vundle#begin('~/some/path/here')
@@ -46,6 +47,7 @@ Plugin 'slashmili/alchemist.vim'
 Plugin 'carlosgaldino/elixir-snippets'
 Plugin 'scrooloose/nerdtree'
 Plugin 'zivyangll/git-blame.vim'
+Plugin 'junegunn/fzf.vim'
 
 " All of your Plugins must be added before the following line
 call vundle#end()            " required
@@ -62,7 +64,7 @@ filetype plugin indent on    " required
 " see :h vundle for more details or wiki for FAQ
 " Put your non-Plugin stuff after this line
 
-autocmd BufRead,BufNewFile /Users/jiyeonhong/Desktop/git/rocket-deploy/projects/nginx-*/files/* set ft=nginx
+" autocmd BufRead,BufNewFile /Users/jiyeonhong/Desktop/git/rocket-deploy/projects/nginx-*/files/* set ft=nginx
 autocmd! bufwritepost $HOME/.vimrc silent! source %
 nnoremap <Leader>s :<C-u>call gitblame#echo()<CR>
 
